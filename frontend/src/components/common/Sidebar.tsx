@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     borderTopColor: "gray",
     flexDirection: "row",
     justifyContent: "space-around",
-    paddingVertical: 10,
+    paddingVertical: 9,
     zIndex: 50,
   },
   iconContainer: {

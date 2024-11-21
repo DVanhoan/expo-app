@@ -7,10 +7,8 @@ export class AppError extends Error {
     this.statusCode = statusCode
     this.isOperational = isOperational
 
-    // Ensure the name of this error is the same as the class name
     Object.setPrototypeOf(this, new.target.prototype)
 
-    // Capture the stack trace (excluding the constructor)
     Error.captureStackTrace(this)
   }
 }

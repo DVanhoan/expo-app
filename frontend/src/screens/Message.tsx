@@ -1,4 +1,6 @@
 import { View, Text } from "react-native";
+import React from "react";
+import { StyleSheet } from "react-native";
 const ProfileScreem: React.FC = () => {
   return (
     <View>
@@ -6,5 +8,7 @@ const ProfileScreem: React.FC = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({});
 
 export default ProfileScreem;

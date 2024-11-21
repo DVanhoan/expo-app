@@ -13,22 +13,22 @@ const initialState: AuthsState = {
   list: [],
 };
 
-const todosSlice = createSlice({
+const authSlice = createSlice({
   name: "todos",
   initialState,
   reducers: {
-    addTodo: (state, action: PayloadAction<string>) => {
+    login: (state, action: PayloadAction<string>) => {
       const newTodo: Auth = {
         id: Date.now(),
         text: action.payload,
       };
       state.list.push(newTodo);
     },
-    removeTodo: (state, action: PayloadAction<number>) => {
+    signup: (state, action: PayloadAction<number>) => {
       state.list = state.list.filter((todo) => todo.id !== action.payload);
     },
   },
 });
 
-export const { addTodo, removeTodo } = todosSlice.actions;
-export default todosSlice.reducer;
+export const { login, signup } = authSlice.actions;
+export default authSlice.reducer;
